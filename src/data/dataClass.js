@@ -1,4 +1,4 @@
-class NewProduct{
+class NewMarket{
     constructor(client,goods,amount,createdDate,priceMarket,priceBulk,pricePurchesed){
         this.barCode = Date.now()
         this.client= client
@@ -11,5 +11,17 @@ class NewProduct{
         return {...this}
     }
 }
+class NewProduct{
+    constructor(nameGoods,amount,createdDate,priceMarket,priceBulk,pricePurchesed){
+        this.barCode = Date.now()
+        this.nameGoods= nameGoods
+        this.amount = amount
+        this.price = [priceBulk,priceMarket,pricePurchesed]
+        this.createdDate = createdDate
+    }
+    get allDate(){
+        return {...this}
+    }
+}
 
-export {NewProduct}
+export {NewMarket,NewProduct}

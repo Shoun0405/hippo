@@ -1,11 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Modal from './components/Modal';
+import AddMarket from './pages/AddMarket';
 
-function App() {
+function App() {  
   return (
-    <div className="App container">
-      <Modal/>
-    </div>
+    <>
+    <Routes>
+        <Route path={'/'} element={<AddMarket/>} />
+    </Routes>
+    </>
   );
 }
 
